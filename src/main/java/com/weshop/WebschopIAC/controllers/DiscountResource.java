@@ -1,7 +1,7 @@
-package com.weshop.WebschopIAC.resource;
+package com.weshop.WebschopIAC.controllers;
 
-import com.weshop.WebschopIAC.model.Discount;
-import com.weshop.WebschopIAC.repo.DiscountRepo;
+import com.weshop.WebschopIAC.domain.Discount;
+import com.weshop.WebschopIAC.repositories.DiscountRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

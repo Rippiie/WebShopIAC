@@ -1,6 +1,6 @@
-package com.weshop.WebschopIAC.repo;
+package com.weshop.WebschopIAC.repositories;
 
-import com.weshop.WebschopIAC.model.Product;
+import com.weshop.WebschopIAC.domain.Product;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ProductRepo extends CrudRepository<Product, Long> {

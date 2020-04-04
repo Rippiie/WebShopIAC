@@ -1,4 +1,4 @@
-package com.weshop.WebschopIAC.model;
+package com.weshop.WebschopIAC.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

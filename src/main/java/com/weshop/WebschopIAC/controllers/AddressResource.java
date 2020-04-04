@@ -1,8 +1,8 @@
-package com.weshop.WebschopIAC.resource;
+package com.weshop.WebschopIAC.controllers;
 
-import com.weshop.WebschopIAC.model.Address;
-import com.weshop.WebschopIAC.repo.AddressRepo;
-import com.weshop.WebschopIAC.repo.CustomerRepo;
+import com.weshop.WebschopIAC.domain.Address;
+import com.weshop.WebschopIAC.repositories.AddressRepo;
+import com.weshop.WebschopIAC.repositories.CustomerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,23 +1,29 @@
-package com.weshop.WebschopIAC.model;
+package com.weshop.WebschopIAC.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.util.UUID;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
-public class Product {
+public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private UUID product;
     private String name;
     private String description;
-    private double price;
     private String photo;
+
+    @OneToMany(targetEntity = Product.class)
+    private List producten;
+
+    public List getProducten() {
+        return producten;
+    }
+
+    public void setProducten(List producten) {
+        this.producten = producten;
+    }
 
     public Long getId() {
         return id;
@@ -25,14 +31,6 @@ public class Product {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public UUID getProduct() {
-        return product;
-    }
-
-    public void setProduct(UUID product) {
-        this.product = product;
     }
 
     public String getName() {
@@ -49,14 +47,6 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
     }
 
     public String getPhoto() {
