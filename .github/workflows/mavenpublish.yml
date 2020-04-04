@@ -1,6 +1,8 @@
 on:
   push:
     branches: [ master, Rida, Redouane, Marlo, Zakaria ]
+  pull_request:
+    branches: [ master, Rida, Redouane, Marlo, Zakaria ]
 jobs:
   build:
     runs-on: ubuntu-latest
