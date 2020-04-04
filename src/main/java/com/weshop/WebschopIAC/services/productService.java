@@ -28,4 +28,15 @@ public class productService {
     public Optional<Product> findByID(Long id){
         return productRepo.findById(id);
     }
+
+    public Boolean deleteByID(Long id) {
+        Optional<Product> product = this.findByID(id);
+
+        if (product.isPresent()) {
+            productRepo.deleteById(id);
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

@@ -82,4 +82,15 @@ public class ProductResource {
         return new ResponseEntity<Product>(setProduct, HttpStatus.OK);
     }
 
+    @DeleteMapping("delete/{id}")
+    public ResponseEntity<Long> deleteProduct(@PathVariable Long id){
+        boolean deletedProduct = productService.deleteByID(id);
+
+        if (deletedProduct){
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(id, HttpStatus.NOT_FOUND);
+        }
+    }
+
 }
