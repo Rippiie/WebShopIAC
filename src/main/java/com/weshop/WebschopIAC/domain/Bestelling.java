@@ -1,4 +1,4 @@
-package com.weshop.WebschopIAC.model;
+package com.weshop.WebschopIAC.domain;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
