@@ -1,8 +1,9 @@
+name: Workflow
 on:
   push:
-    branches: [ master, Rida, Redouane, Marlo, Zakaria ]
+    branches: [ master ]
   pull_request:
-    branches: [ master, Rida, Redouane, Marlo, Zakaria ]
+    branches: [ master, development ]
 jobs:
   build:
     runs-on: ubuntu-latest
